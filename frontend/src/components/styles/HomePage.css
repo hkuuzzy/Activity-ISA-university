@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+.stat { display: grid; gap: 8px; min-height: 120px; align-content: center; }
+.stat b { font-family: "Bitter", Georgia, serif; font-size: clamp(2rem, 2vw, 2.3rem); }
+.stat span { color: var(--muted); }
+.board { margin-top: 22px; }
+.board h2 { margin: 0 0 16px; font-size: 1.2rem; }
+.board p { line-height: 1.6; }
+.slot {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+.slot time { font-weight: 700; color: var(--text); }
+.slot.now {
+  background: linear-gradient(90deg, rgba(217, 165, 26, 0.13), transparent);
+  border-left: 4px solid var(--warn);
+  padding-left: 16px;
+  margin-left: -2px;
+  border-radius: 0 12px 12px 0;
+}
+
+@media (max-width: 560px) {
+  .slot { grid-template-columns: 1fr; gap: 8px; }
+  .slot .muted { grid-column: 1; }
+}

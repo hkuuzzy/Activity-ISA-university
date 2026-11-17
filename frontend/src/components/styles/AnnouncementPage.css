@@ -1,0 +1,28 @@
+.announcement-list { display: grid; gap: 18px; padding: 20px; }
+.announcement-item {
+  background: #fbfdff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 22px;
+}
+.announcement-item.important { border-color: rgba(217, 165, 26, 0.5); background: #fffaf0; }
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #e8f1fb;
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.tag.secondary { background: #e6f4ef; }
+.announcement-item h2 { margin: 0 0 10px; font-size: 1.3rem; }
+.announcement-item p { margin: 0 0 12px; color: var(--muted); line-height: 1.7; }
+.meta { color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 560px) {
+  .announcement-item { padding: 18px 16px; }
+}
